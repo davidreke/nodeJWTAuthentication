@@ -1,0 +1,11 @@
+1. we will be using an MVC approach (model view & controller)
+
+We are going to use these auth rotes
+
+/signup GET sign up page
+/login GET log in page
+/signup POST create a new user in DB
+/login POST authenticate current user
+/logout GET log a user out
+
+In the first lesson we will focus on teh first four

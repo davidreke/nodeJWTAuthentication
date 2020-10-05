@@ -17,7 +17,7 @@ router.get('/login', authController.login_get);
 router.post('/login', authController.login_post);
 // we will create an auth controller file that will keep our logic seperate from our routes. We will name the folder controllers, and the file authControllers.js
 
-router.get('/logout', authController.logout_get)
+
 
 module.exports = router;
 

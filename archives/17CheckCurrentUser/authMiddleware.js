@@ -29,7 +29,7 @@ const requireAuth = (req, res, next) =>{
 
 const checkUser = (req, res, next) =>{
     // get token
-    const token = req.cookies.jwt;
+    const token = req.cookies.jwt
 
     if (token){
                 jwt.verify(token, "net ninja secret", async (err, decodedToken) =>{

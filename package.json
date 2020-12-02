@@ -25,5 +25,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/iamshaunjp/node-express-jwt-auth/issues"
+  },
+  "engine":{
+    "node":"12.x"
   }
 }

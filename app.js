@@ -29,7 +29,10 @@ app.set('view engine', 'ejs');
 // database connection
 const dbURI = 'mongodb+srv://david:Looping!@nodeauth.uj5ph.mongodb.net/<dbname>?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(port))
+  .then((result) => {
+    app.listen(port)
+    console.log(`listening on port ${port}`)
+    })
   .catch((err) => console.log(err));
 
 

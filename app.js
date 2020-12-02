@@ -11,6 +11,7 @@ const {requireAuth, checkUser} = require('./middleware/authMiddleware')
 const authRoutes = require('./routes/authRoutes')
 
 const app = express();
+const port = process.env.PORT || 3000
 
 // middleware
 app.use(express.static('public'));
@@ -26,7 +27,7 @@ app.set('view engine', 'ejs');
 // database connection
 const dbURI = 'mongodb+srv://david:Looping!@nodeauth.uj5ph.mongodb.net/<dbname>?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(port))
   .catch((err) => console.log(err));
 
 

@@ -1,5 +1,5 @@
 // we use this file to protect routes
-
+require('dotenv').config()
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
@@ -11,7 +11,7 @@ const requireAuth = (req, res, next) =>{
     // check for jwt token
     if(token){
         // we get secret from jwt.sign method
-        jwt.verify(token, "net ninja secret", (err, decodedToken) =>{
+        jwt.verify(token, process.env.SALT, (err, decodedToken) =>{
             if (err){
                 console.log(err.message);
                 res.redirect('/login');

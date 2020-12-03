@@ -1,7 +1,7 @@
 // we use this file to protect routes
 require('dotenv').config()
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/user');
 
 const requireAuth = (req, res, next) =>{
 
